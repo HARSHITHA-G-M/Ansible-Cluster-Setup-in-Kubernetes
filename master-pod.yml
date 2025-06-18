@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: master
+  labels:
+    app: master
+spec:
+  containers:
+    - name: master
+      image: ansible-master-img
+      imagePullPolicy: Never
+      ports:
+        - containerPort: 22
+      securityContext:
+        privileged: true
+

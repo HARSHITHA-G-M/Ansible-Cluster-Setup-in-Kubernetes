@@ -1,0 +1,23 @@
+---
+- name: Test Ansible connection and setup
+  hosts: nodes
+  become: yes
+  tasks:
+
+    - name: ✅ Ensure Python is available (required for Ansible)
+      raw: test -e /usr/bin/python || apt update && apt install -y python3
+      changed_when: false
+
+    - name: 🛠️ Install curl
+      apt:
+        name: curl
+        state: present
+      when: ansible_os_family == "Debian"
+
+    - name: 📂 Create a test directory
+      file:
+        path: /home/ansible/test-dir
+        state: directory
+        mode: '0755'
+
+
