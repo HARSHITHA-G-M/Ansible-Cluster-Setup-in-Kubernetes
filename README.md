@@ -1,4 +1,4 @@
-# ☸️ Project 1 – Phase 2: Ansible Cluster Setup in Kubernetes (Manual Pods Setup)
+# ☸️ Project 2: Ansible Cluster Setup in Kubernetes (Manual Pods Setup)
 
 > 🔧 A hands-on DevOps project to manually set up an Ansible Cluster inside Kubernetes pods — without using any pre-built images or Helm charts.
 
